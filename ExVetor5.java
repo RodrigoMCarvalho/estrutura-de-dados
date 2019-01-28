@@ -10,7 +10,8 @@ class ExVetor5 {
 
 		System.out.println(vetor);
 
-		vetor.remove(1);
+		int num = vetor.busca("B");
+		vetor.remove(num);
 
 		System.out.println(vetor);
 
