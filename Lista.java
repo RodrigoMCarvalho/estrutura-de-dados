@@ -94,6 +94,16 @@ class Lista<T> {
 		return busca(elemento) > -1;
 	}
 
+	public int ultimoIndice(T elemento){
+		int ultmaPosicao = -1;
+		for(int i=this.tamanho-1; i >= 0; i--){
+			if(elementos[i].equals(elemento)){
+				ultmaPosicao = i;
+			}
+		}
+		return ultmaPosicao;  //se achar retona o indice, senao -1
+	}
+
 	public int tamanho(){
 		return this.tamanho;
 	}
