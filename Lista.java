@@ -55,6 +55,23 @@ class Lista<T> {
 		this.tamanho--;
 	}
 
+	public void remove(T elemento) {
+		int pos = this.busca(elemento);
+		if(pos > -1) {
+			this.remove(pos);
+		}
+	}
+
+	public void limpa(){
+
+		// this.elementos = (T[]) new Object [this.elementos.length]; instancia novamente o objeto
+
+		for(int i = 0; i < this.tamanho; i++) {
+			this.elementos[i] = null;
+		}
+		this.tamanho = 0;
+	}
+
 	//private pois só será usado dentro da classe Vetor
 	private void aumentaCapacidade() {
 
@@ -70,7 +87,7 @@ class Lista<T> {
 		}
 	}
 
-	public Object busca(int posicao) {
+	public T busca(int posicao) {
 		validaPosicao(posicao);
 		return this.elementos[posicao];
 	}
@@ -82,6 +99,10 @@ class Lista<T> {
 			}
 		}
 		return -1;
+	}
+
+	public T obtem(int posicao) {
+		return this.busca(posicao);
 	}
 
 	public boolean contem(T elemento) {
