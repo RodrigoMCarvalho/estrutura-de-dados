@@ -52,7 +52,7 @@ class EstruturaEstatica<T> {
 	}
 
 	@SuppressWarnings("unchecked")
-	private void aumentaCapacidade() {
+	protected void aumentaCapacidade() {
 
 		//se o tamanho do vetor for igual a capacidade do vetor
 		if(this.tamanho == this.elementos.length){
@@ -75,6 +75,10 @@ class EstruturaEstatica<T> {
 
 	public int tamanho(){
 		return this.tamanho;
+	}
+
+	public boolean isVazio() {
+		return this.tamanho == 0; //se for igual a 0 retorna true, senao false
 	}
 
 	@Override
