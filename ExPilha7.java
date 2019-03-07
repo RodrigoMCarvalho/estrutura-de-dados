@@ -36,23 +36,23 @@ class ExPilha7 {
 				
 			} else if ( num % 2 == 0){
 				par.empilha(num);
-				System.out.println("Empilhanado na pilha PAR");
+				System.out.println("Empilhando na pilha PAR");
 			} else {
 				impar.empilha(num);
-				System.out.println("Empilhanado na pilha IMPAR");
+				System.out.println("Empilhando na pilha IMPAR");
 			}
 		}
 
-		System.out.println("Desempilhanado todos os numeros da pilha PAR");
+		System.out.println("Desempilhando todos os numeros da pilha PAR");
 
 		while(!par.isVazio()){
-			System.out.println("Desempilhanado da pilha PAR: " + par.desempilha());
+			System.out.println("Desempilhando da pilha PAR: " + par.desempilha());
 		}
 
-		System.out.println("Desempilhanado todos os numeros da pilha IMPAR");
+		System.out.println("Desempilhando todos os numeros da pilha IMPAR");
 
 		while(!impar.isVazio()){
-			System.out.println("Desempilhanado da pilha IMPAR: " + impar.desempilha());
+			System.out.println("Desempilhando da pilha IMPAR: " + impar.desempilha());
 		}
 	}
 }
