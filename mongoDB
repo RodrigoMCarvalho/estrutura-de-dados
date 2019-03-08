@@ -38,4 +38,16 @@ db.alunos.insert(
 }
 )
 
+db.alunos.find(
+	{
+		"nome" : "Rodrigo",
+		"nome" : "Gustavo"
+	}
+).pretty()
 
+db.alunos.find({
+	$or : [
+		{ nome : "Rodrigo"},
+		{ nome : "Gustavo"}
+	]
+}).pretty()
