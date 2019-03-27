@@ -19,6 +19,7 @@ class ExPilha12 {
 		String numeroBinario = "";
 		int resto;
 
+		//obtem os restos da divisão
 		while(numero > 0) {
 			resto = numero % 2;
 			pilha.push(resto);
